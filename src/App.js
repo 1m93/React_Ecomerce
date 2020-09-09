@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "./components/header/Navbar";
-import SideBar from "./components/sidebar/SideBar";
-import Products from "./components/products/Products";
+import Navbar from "./containers/Navbar";
+import SideBar from "./containers/SideBar";
+import Products from "./containers/Products";
 
 function App() {
 	const [type, setType] = useState("");

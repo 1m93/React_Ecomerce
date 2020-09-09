@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import "../../sass/style.sass";
+import "../sass/style.sass";
 
 function Navbar({ handleSearchChange }) {
 	return (
@@ -10,7 +10,7 @@ function Navbar({ handleSearchChange }) {
 				<a href="./">
 					<img
 						className="navbar__logo"
-						src={require("../../images/logo-is.webp")}
+						src={require("../images/logo-is.webp")}
 						width="40px"
 						alt="logo"
 					/>

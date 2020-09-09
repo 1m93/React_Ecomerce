@@ -1,8 +1,8 @@
 import React from "react";
-import Type from "./Type";
-import Brand from "./Brand";
-import Price from "./Price";
-import Rate from "./Rate";
+import Type from "../components/sidebar/Type";
+import Brand from "../components/sidebar/Brand";
+import Price from "../components/sidebar/Price";
+import Rate from "../components/sidebar/Rate";
 
 function SideBar({
 	handleTypeSelect,

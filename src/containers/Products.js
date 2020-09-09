@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Item from "./Item";
-import Pagination from "./Pagination";
+import Item from "../components/products/Item";
+import Pagination from "../components/products/Pagination";
 
 function Products({ type, brand, rate, from, to, search }) {
 	const [products, setProducts] = useState([]);
@@ -9,6 +9,8 @@ function Products({ type, brand, rate, from, to, search }) {
 	const [sort, setSort] = useState("");
 
 	useEffect(() => {
+		document.title = "Ecomerce";
+
 		let xhr = new XMLHttpRequest();
 		let url = `http://localhost:3001/products?_page=${page}&_limit=16`;
 
