@@ -1,26 +1,76 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navbar from "./components/header/Navbar";
+import SideBar from "./components/sidebar/SideBar";
+import Products from "./components/products/Products";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [type, setType] = useState("");
+	const [brand, setBrand] = useState([]);
+	const [rate, setRate] = useState("");
+	const [from, setFrom] = useState("");
+	const [to, setTo] = useState("");
+	const [search, setSearch] = useState("");
+
+	const handleTypeSelect = (value) => {
+		setType(value);
+	};
+
+	const handleBrandSelect = (value) => {
+		setBrand(value);
+	};
+
+	const handleRateSelect = (value) => {
+		setRate(value);
+	};
+
+	const handleFromSelect = (value) => {
+		setFrom(value);
+	};
+
+	const handleToSelect = (value) => {
+		setTo(value);
+	};
+
+	const handleSearchChange = (value) => {
+		setSearch(value);
+	};
+
+	const handleClearFilter = () => {
+		setType("");
+		setBrand([]);
+		setRate("");
+		setFrom("");
+		setTo("");
+	};
+
+	return (
+		<div className="App">
+			<Navbar handleSearchChange={handleSearchChange} />
+			<main>
+				<SideBar
+					handleTypeSelect={handleTypeSelect}
+					handleBrandSelect={handleBrandSelect}
+					handleRateSelect={handleRateSelect}
+					handleFromSelect={handleFromSelect}
+					handleToSelect={handleToSelect}
+					from={from}
+					to={to}
+					handleClearFilter={handleClearFilter}
+					type={type}
+					brand={brand}
+					rate={rate}
+				/>
+				<Products
+					type={type}
+					brand={brand}
+					rate={rate}
+					from={from}
+					to={to}
+					search={search}
+				/>
+			</main>
+		</div>
+	);
 }
 
 export default App;
