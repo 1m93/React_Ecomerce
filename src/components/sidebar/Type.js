@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import "../../sass/style.sass";
 
 function Type({ handleTypeSelect }) {
 	const [types, setTypes] = useState([]);

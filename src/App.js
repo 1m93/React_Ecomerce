@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./containers/Navbar";
 import SideBar from "./containers/SideBar";
 import Products from "./containers/Products";
+import "./sass/style.sass";
 
 function App() {
 	const [type, setType] = useState("");

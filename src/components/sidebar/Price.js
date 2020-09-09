@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../sass/style.sass";
 
 function Price({ handleFromSelect, handleToSelect, from, to }) {
 	const [fromInput, setFromInput] = useState("");

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../../sass/style.sass";
 
 function Brand({ handleBrandSelect, brand }) {
 	const [brands, setBrands] = useState([]);
